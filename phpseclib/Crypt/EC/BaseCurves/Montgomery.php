@@ -274,6 +274,9 @@ class Montgomery extends Base
             return $p;
         }
         list($x, $z) = $p;
+        if ($z->equals($this->zero)) {
+            return [clone $this->zero];
+        }
         return [$x->divide($z)];
     }
 }
