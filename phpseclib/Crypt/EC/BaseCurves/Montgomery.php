@@ -131,6 +131,7 @@ class Montgomery extends Base
      * Retrieve the base point as an array
      *
      * @return PrimeInteger[]
+     * @psalm-suppress PossiblyUnusedMethod
      */
     public function getBasePoint(): array
     {

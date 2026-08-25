@@ -199,6 +199,7 @@ abstract class PKCS8 extends Progenitor
         }
 
         if (isset($key['privateKey']) && !isset($components['QA'])) {
+            /** @psalm-suppress InvalidArgument */
             $components['QA'] = self::deriveMontgomeryPublicKey($components);
         }
 

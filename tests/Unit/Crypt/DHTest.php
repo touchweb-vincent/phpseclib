@@ -304,6 +304,7 @@ Q3ADAIcv9LEmTBnSAOsCs1K9ExAmSv/T2/4+9dW28UYb+p/uV477d1wf+nCWS6VU
         $ours = EC::createKey('Curve25519');
         foreach ($theirsArr as $theirs) {
             $theirs = EC::loadFormat('MontgomeryPublic', hex2bin($theirs));
+            $this->assertInstanceOf(EC\PublicKey::class, $theirs);
             try {
                 $secret = DH::computeSecret($ours, $theirs);
                 $this->fail(sprintf(

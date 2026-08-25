@@ -75,7 +75,7 @@ class Integer extends Base
     /**
      * Constant Time Mask
      *
-     * @var BigInteger[]
+     * @var array<int, list{BigInteger, BigInteger}>
      */
     protected static $mask;
 

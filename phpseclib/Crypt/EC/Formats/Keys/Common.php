@@ -397,8 +397,8 @@ trait Common
     }
 
     /**
-     * @param array{curve: BaseCurve, dA: Integer} $components
-     * @return array{Integer}
+     * @param array{curve: BaseCurve, dA: BigInteger} $components
+     * @return array{\phpseclib4\Math\PrimeField\Integer}
      */
     private static function deriveMontgomeryPublicKey(array $components): array
     {
