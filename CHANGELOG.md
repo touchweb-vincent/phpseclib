@@ -1,9 +1,18 @@
 # Changelog
 
+## 4.0.0 - 2026-08-22
+
+- split CSR / CRL / SPKAC out from X509
+- add PFX / CMS support
+- implement lazy loading for ASN1
+- SSH2/SFTP: throw exceptions instead of returning false
+- bump minimum required PHP version to 8.1.0
+- namespace changed from `\phpseclib3` to `\phpseclib4` to facilitate a yet to be written phpseclib 3 shim (phpseclib3_compat)
+
 ## 3.0.56 - 2026-08-02
 
-- RSA: don't use OpenSSL for PSS on OpenSSL < 3.1.0 (#2156)
-- SFTP: throw TimeoutExceptions on timeout vs UnexpectedValueException (#2152)
+- RSA: don't use OpenSSL for PSS on OpenSSL < 3.1.0 (#2152)
+- SFTP: throw TimeoutExceptions on timeout vs UnexpectedValueException (#2156)
 - SFTP/Stream: use default context if one isn't explicitly provided (#2154)
 
 ## 3.0.55 - 2026-06-14
